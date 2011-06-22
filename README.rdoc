@@ -1,21 +1,22 @@
-= AvdtLdap
+= AvdtLdapLegacy
+
+avdt_ldap version for Ruby 1.8.6
 
 This gem supports LDAP authentication both on sigle and multiple LDAP servers with a minimal configuration.
-It requires 'net-ldap' gem (automatically installed)
+It requires 'ruby-net-ldap' gem (automatically installed)
 
 == Installation
 
 === Rails 3
 
-Add this to your +Gemfile+ and run the +bundle+ command:
-
-  gem "avdt_ldap"
+This gem doesn't work with Rails 3 because it requires Ruby >= 1.8.7
+If you use Rails 3 you have to install avdt_ldap. Documentation[https://github.com/davide-targa/avdt_ldap] RubyGem[https://rubygems.org/gems/avdt_ldap]
 
 === Rails 2
 
 Add this to your environment.rb file:
 
-  config.gem "avdt_ldap"
+  config.gem "avdt_ldap_legacy"
 
 == Usage
 
@@ -24,7 +25,7 @@ Just add a config file named ldap.yml in config/ directory.
 You can change default file name by setting +ldap_config_file+ configuration parameter.
 For example, inside the avdt_ldap initializer:
 
-  AvdtLdap.configure do |c|
+  AvdtLdapLegacy.configure do |c|
     c.ldap_config_file = "#{Rails.root}/config/foobar.yml"
   end
 

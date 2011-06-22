@@ -1,5 +1,4 @@
-require "avdt_ldap_legacy/version"
-
-module AvdtLdapLegacy
-  # Your code goes here...
-end
+# avdt init file
+require 'avdt_ldap_legacy/hash'
+require 'avdt_ldap_legacy/avdt_ldap_legacy'
+require 'avdt_ldap_legacy/configuration'
